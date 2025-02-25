@@ -1,0 +1,381 @@
+import { StyleSheet,I18nManager } from 'react-native'
+import { RFValue } from 'react-native-responsive-fontsize'
+const isRTL = I18nManager.isRTL
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#FFF',
+    flex: 1,
+    // alignItems: "center",
+  },
+  header: {
+    backgroundColor: '#F8E3E3',
+    width: '100%',
+    // paddingHorizontal: 20,
+    // alignItems: "center",
+  },
+  curveImageRight: {
+    width: 160,
+    height: 160,
+    position: 'absolute',
+    right:isRTL?0: -10,
+    left:isRTL?-10:0,
+    contentFit: 'contain',
+  },
+  sliderImage: {
+    // width: "90%",
+    // backgroundColor:"#0f0",
+    height: 75,
+    alignItems: 'center',
+    resizeMode: 'contain',
+    alignSelf: 'center',
+    borderRadius: 10,
+  },
+  searchContainer: {
+    width: '98%',
+    height: 50,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#FFF',
+    borderRadius: 15,
+    paddingHorizontal: 15,
+    alignSelf: 'center',
+    marginVertical: 10,
+  },
+  searchInput: {
+    flex: 1,
+    fontSize: 14,
+    color: '#000',
+    marginLeft: 10,
+  },
+  productList: {
+    alignItems: 'center',
+    backgroundColor: '#FF0',
+  },
+  brandList: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    width: '100%',
+    marginVertical: 10,
+    // marginHorizontal: 10,
+  },
+  brandItem: {
+    width: 70,
+    height: 70,
+    borderRadius: 35,
+    backgroundColor: '#FFF',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginHorizontal: 5,
+  },
+
+  //   Modal
+
+  modalContainer: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+  modalContent: {
+    backgroundColor: 'white',
+    padding: 20,
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+  },
+  closeButton: {
+    position: 'absolute',
+    alignSelf: 'center',
+    marginTop: -20,
+    backgroundColor: '#EDEDED',
+    width: 45,
+    height: 45,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 22.5,
+  },
+  closeButtonText: {
+    fontSize: 18,
+    color: '#000',
+  },
+  modalIcon: {
+    width: 115,
+    height: 115,
+    marginVertical: 20,
+  },
+  modalTitle: {
+    fontSize: 23,
+    color: '#000',
+    fontWeight: 'bold',
+    marginBottom: 10,
+    textAlign: 'left',
+  },
+  modalDescription: {
+    fontSize: 16,
+    color: '#000',
+    textAlign: 'center',
+    marginVertical: 10,
+  },
+  modalLoginButton: {
+    backgroundColor: '#30449B',
+    borderRadius: 30,
+    width: '90%',
+    height: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 10,
+    marginHorizontal: 20,
+  },
+  modalLoginText: {
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: 16,
+  },
+  loginButton: {
+    padding: 15,
+    borderRadius: 30,
+    backgroundColor: '#FFC30E',
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginVertical: 10,
+  },
+  loginIcon: {
+    width: 20,
+    height: 20,
+    marginRight: 5,
+    resizeMode: 'contain',
+  },
+  loginText: {
+    color: '#000',
+    fontSize: 17,
+    fontWeight: 'bold',
+  },
+  arrowIcon: {
+    width: 17,
+    height: 12,
+    marginLeft: 5,
+    resizeMode: 'contain',
+  },
+  headerContent: {
+    width: '100%',
+    alignItems: 'flex-start',
+    paddingHorizontal: 20,
+    marginBottom: 20,
+  },
+  logo: {
+    width: RFValue(110),
+    height: RFValue(35),
+    resizeMode: 'contain',
+    marginBottom: 20,
+  },
+
+  //
+
+  containerSubcategory: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginVertical: 10,
+    // backgroundColor: "#FF0",
+    width: '100%',
+  },
+  buttonSubcategory: {
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#ccc',
+    backgroundColor: '#fff',
+    marginHorizontal: 5,
+    maxWidth: '45%', // Limit maximum width
+    // minWidth: 100, // Set minimum width
+    marginVertical: 5,
+  },
+  buttonTextSubcategory: {
+    fontSize: 16,
+    color: '#000',
+    numberOfLines: 1,
+    ellipsizeMode: 'tail',
+  },
+  containerSubcategory: {
+    flexDirection: 'row',
+    flexWrap: 'wrap', // Allow wrapping to next line
+    justifyContent: 'flex-start',
+    marginVertical: 10,
+    // gap: 5,
+  },
+  activeButtonSubcategory: {
+    borderColor: '#FFD700',
+    borderWidth: 2,
+  },
+  buttonTextSubcategory: {
+    fontSize: 16,
+    color: '#000',
+  },
+  activeButtonTextSubcategory: {
+    fontWeight: 'bold',
+    color: '#FFD700',
+  },
+  //
+
+  titleSection: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: RFValue(20),
+  },
+  title: {
+    color: '#000',
+    fontSize: RFValue(18),
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  subtitle: {
+    color: '#7D7D7D',
+    fontSize: RFValue(15),
+    fontWeight: '400',
+    textAlign: 'center',
+  },
+  containerTextInput: {
+    width: '48%',
+    // paddingHorizontal: 20,
+    marginVertical: 10,
+  },
+  label: {
+    fontSize: 14,
+    fontWeight: '500',
+    color: '#333',
+    position: 'absolute',
+    top: -10,
+    left: 20,
+    zIndex: 2,
+    backgroundColor: '#FFF',
+    paddingHorizontal: 5,
+  },
+  inputContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 8,
+    height: 50,
+    paddingHorizontal: 10,
+  },
+  separator: {
+    width: 1,
+    height: '100%',
+    backgroundColor: '#ccc',
+    marginHorizontal: 10,
+  },
+  input: {
+    width: '50%',
+    fontSize: 16,
+    color: '#333',
+  },
+
+  //
+
+  optionContainer: {
+    flexDirection: 'row-reverse',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 15,
+    width: '100%',
+    borderWidth: 0.5,
+    borderColor: '#ccc',
+    borderRadius: 10,
+    paddingHorizontal: 10,
+    paddingVertical: 10,
+  },
+  radioButton: {
+    height: 20,
+    width: 20,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#888',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  selectedRadioButton: {
+    borderColor: '#FFCC00',
+  },
+  radioInnerCircle: {
+    height: 10,
+    width: 10,
+    borderRadius: 5,
+    backgroundColor: '#FFCC00',
+  },
+  optionText: {
+    marginLeft: 10,
+    fontSize: 17,
+    fontWeight: '800',
+  },
+
+  //
+  cartIconContainer: {
+    width: 55,
+    height: 55,
+    borderRadius: 28,
+    borderWidth: 1.5,
+    borderColor: '#FFF',
+    // position: "absolute",
+    // right: 20,
+    // bottom: 30,
+    transform: [{ translateY: -20 }],
+    backgroundColor: '#30449B',
+    padding: 5,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    elevation: 3,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  cartIcon: {
+    width: 26,
+    height: 26,
+    resizeMode: 'contain',
+  },
+  cartBadge: {
+    position: 'absolute',
+    top: 1,
+    right: 4,
+    backgroundColor: '#FFC30E',
+    borderRadius: 10,
+    width: 20,
+    height: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  exploerIconContainer: {
+    width: 55,
+    height: 55,
+    borderRadius: 28,
+    borderWidth: 1.5,
+    borderColor: '#FFF',
+    marginBottom: 10,
+
+    transform: [{ translateY: -20 }],
+    backgroundColor: '#FFC30E',
+    padding: 5,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    elevation: 3,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  cartBadgeText: {
+    color: '#000',
+    fontSize: 13,
+    fontWeight: 'bold',
+  },
+  footer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute',
+    marginVertical: 10,
+    right: 10,
+    bottom: 30,
+  },
+})
+
+export default styles
